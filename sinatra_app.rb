@@ -5,11 +5,17 @@ class FirstApp < Sinatra::Base
 	set :static, true
 	set :public, File.dirname(__FILE__) + '/static'
   
-  get '/' do  	
-    'Hello World'
-  end
+	get '/' do  	
+    	'Hello World'
+	end
 
-  get '/hello_with_name/:name' do  	
-  	"Hello #{params[:name]}"
-  end
+	get '/hello_with_name/:name' do  	
+  		"Hello #{params[:name]}"
+  	end
+
+  	get '/say/*/to/*' do  		
+  		params[:splat][0]
+  		params[:splat][1]
+  	end
 end
+
