@@ -14,8 +14,7 @@ class FirstApp < Sinatra::Base
   	end
 
   	get '/say/*/to/*' do  		
-  		params[:splat][0]
-  		params[:splat][1]
+  		params[:splat]  		
   	end
 
   	get '/:name' do
