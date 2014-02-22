@@ -17,5 +17,10 @@ class FirstApp < Sinatra::Base
   		params[:splat][0]
   		params[:splat][1]
   	end
+
+  	get '/:name' do
+  		@_name = params[:name]
+  		erb :index
+	end
 end
 
